@@ -2,7 +2,7 @@
 
 This is a small Cursor/VS Code extension that adds `Compare with Active Tab` to the editor tab right-click menu.
 
-## What it does
+## How to
 
 1. Keep one tab focused.
 2. Right-click another tab.
@@ -11,21 +11,21 @@ This is a small Cursor/VS Code extension that adds `Compare with Active Tab` to 
 
 The extension also keeps track of the previously focused tab so it still works in cases where right-clicking a tab changes focus before the command runs.
 
-## Files
-
-- `package.json`: extension manifest and tab menu contribution
-- `extension.js`: command implementation
-
-## Install locally in Cursor
+## Install from folder
 
 1. Open the `cursor-compare-active-tab` folder in Cursor.
-2. Run `Developer: Install Extension from Location...`
+2. Run (CMD+Shift+P) `Developer: Install Extension from Location...`
 3. Select this folder.
 
-If your Cursor build expects a packaged extension instead, package it first with:
+## Package and install
+
+You can install it in VS Code the same way:
+
+1. Package the extension:
 
 ```sh
 npx @vscode/vsce package
 ```
 
-Then install the generated `.vsix` file with `Extensions: Install from VSIX...`.
+2. In VS Code, run `Extensions: Install from VSIX...`
+3. Select the generated `.vsix` file
