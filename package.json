@@ -1,0 +1,37 @@
+{
+  "name": "cursor-compare-active-tab",
+  "displayName": "Compare With Active Tab",
+  "description": "Adds a tab context menu command to compare the clicked tab with the active tab.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:cursorCompareActiveTab.compareWithActiveTab"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursorCompareActiveTab.compareWithActiveTab",
+        "title": "Compare with Active Tab"
+      }
+    ],
+    "menus": {
+      "editor/title/context": [
+        {
+          "command": "cursorCompareActiveTab.compareWithActiveTab",
+          "group": "navigation@50"
+        }
+      ]
+    }
+  }
+}
